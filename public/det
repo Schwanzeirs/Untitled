@@ -1,0 +1,8 @@
+            <form id="form-message">
+                <!-- <input type="file" name="file" id="file" hidden>
+                <label for="file" class="mr-1">
+                    <p class="pn">p</p>
+                </label> -->
+                <input type="text" placeholder="Send message" class="send" id="input-msg">
+                <button class="send-msg" type="submit">Send</button>
+            </form>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Project</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://sdk.twilio.com/js/video/releases/2.15.2/twilio-video.min.js"></script>
+    <script src="./script.js" defer></script>
+    <script src="./data.js" defer></script>
+    <script src="./share.js" defer></script>
+    <script src="./screenshot.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <form id="room-name-form">
+        Login <br>
+        Username <input type="text" name="username" id="username"> <br>
+        Password <input type="text" name="password" id="password"> <br>
+        <button type="submit">Join Room</button>
+    </form>
+    <button id="disconnect" hidden>Disconnect</button>
+    <form id="data-validation-form" hidden>
+        No. KTP<input type="checkbox" id="no-ktp" value="Data sesuai" name="data"> <br>
+        No. KK<input type="checkbox" id="no-kk" value="Data sesuai" name="data"> <br>
+        Nama <input type="checkbox" id="nama" value="Data sesuai" name="data"> <br>
+        Alamat <input type="checkbox" id="alamat" value="Data sesuai" name="data"> <br>
+        Nama penjamin <input type="text" id="penjamin" name="data"> <br>
+        Nomor telepon penjamin <input type="text" id="hp" name="data"> <br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="share-screen">
+        <video id="screen" autoplay playsinline muted></video>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div>
+
+        <button id="startshare">Start share screen</button>
+        <button id="stopshare">Stop share screen</button>
+        <button id="captureshare">Capture the screen</button>
+    </div>
+    <form id="data-message-form">
+        <input type="text" id="message" placeholder="Input message">
+        <button type="submit">Send</button>
+    </form>
+    <button id="comparation" hidden>Tampilkan Data</button>
+    <button id="hidden" hidden>Tutup Data</button>
+    <div id="data" hidden>
+    </div>
+    <p id="result-location"></p>
+    <p>
+    <div id="video-div"></div>
+    <button id="start-video-button">Video on</button>
+    <button id="stop-video-button">Video off</button>
+    </p>
+    <div class="videos">
+        <div id="video-container"></div>
+        <p id="name"></p>
+        <script src="main.js"></script>
+    </div>
+    <div class="chat" id="chat-container">
+    </div>
+    <button id="screenshot">Take screenshoot</button>
+    <div id="screenshot-result"></div>
+</body>
+
+</html>
